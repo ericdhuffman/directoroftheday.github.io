@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/**** RESET ****/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  font-family: 'Poppins', sans-serif;
+}
+
+/**** VARIABLES ****/
+/**** HEADER, NAV & FOOTER ****/
+header, footer {
+  background-color: #000;
+  color: #FFF;
+}
+nav {
+  padding: 1em 1.5em;
+}
+.navbar-top {
+  text-align: right;
+}
+.navbar-top .search-icon {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+.navbar-top .search-box .input-box {
+  display: none;
+}
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-main .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar-main .logo a {
+  color: #FFF;
+  text-decoration: none;
+  font-family: 'Great Vibes';
+  font-size: 2.5em;
+}
+.navbar-main .logo img {
+  height: 40px;
+  width: 40px;
+}
+.navbar-main .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-main .nav-links li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 14px;
+}
+.navbar-main .nav-links li a {
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.navbar-main .nav-links li .sub-menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  line-height: 40px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+  z-index: 2;
+}
+.navbar-main .nav-links li .sub-menu li {
+  background-color: #000;
+  color: #FFF;
+  /* transition: background-color 300ms, color 400ms; */
+}
+.navbar-main .nav-links li .sub-menu li a {
+  text-transform: none;
+}
+.navbar-main .nav-links li .sub-menu li:hover,
+.navbar-main .nav-links li .sub-menu li:hover a {
+  background-color: #FFF;
+  color: #000;
+}
+.navbar-main .nav-links li:hover .sub-menu {
+  display: block;
+}
+.navbar-main .nav-links li .sub-menu .more-sub-menu{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  border-radius: 0 4px 4px 4px;
+  z-index: 1;
+}
+.navbar-main .nav-links li .sub-menu .more:hover .more-sub-menu {
+  display: block;
+}
+.navbar-main .burger {
+  display: none;
+}
+footer {
+  padding: 1.2em 1.5em;
+  font-family: 'Poppins', sans-serif;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .footer-content .footer-logo h1 {
+  font-family: 'Great Vibes';
+}
+footer .footer-content .footer-logo img {
+  width: 60px;
+  height: 60px;
+}
+footer .footer-content ul {
+  list-style: none;
+}
+footer .footer-content li a {
+  color: #FFF;
+  text-decoration: none;
+}
+footer .footer-bottom {
+  text-align: center;
+  padding: 1em;
+}
+/**** HOME PAGE: HERO SECTION ****/
+
+#hero {
+  height: 100vh;
+  width: 100vw;
+}
+/**** HOME PAGE: ABOUT SECTION ****/
+/**** HOME PAGE: PARTNERS SECTION ****/
+/**** HOME PAGE: LOCATOR SECTION ****/
+/**** HOME PAGE: BLOG PREVIEW SECTION ****/
+/**** HOME PAGE: CONTACT SECTION ****/
+/**** ABOUT: COMPANY PAGE ****/
+/**** ABOUT: INDUSTRY PAGE ****/
+/**** ABOUT: LETTER PAGE ****/
+/**** RESOURCES: FAMILIES PAGE ****/
+/**** RESOURCES: FUNERAL PROFESSIONALS PAGE ****/
+/**** RESOURCES: FAQ PAGE ****/
+/**** RESOURCES: LOCATOR PAGE ****/
+/**** RESOURCES: MORE PAGE ****/
+/**** BLOG PAGE ****/
+/**** BLOG POST ****/
+/**** BLOG ARCHIVE ****/
+/**** MARKETING: PARTNERS PAGE ****/
+/**** MARKETING: FIND BUSINESS PAGE ****/
+/**** MARKETING: BECOME PARTNER PAGE ****/
+/**** CONTACT PAGE ****/
+/**** SEARCH PAGE ****/
+/**** 404 PAGE ****/
+/**** MEDIA QUERY: TABLET AND MOBILE VIEW ****/
+@media (max-width:922px) {
+  .navbar-main {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 75vh;
+    top: 8vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .navbar-main .burger {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar-main .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-active {
+    transform: translateX(0);
+  }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .nav-links li {
+    animation: navLinkFade 0.5s ease forwards 0.5s;
+  }
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  .nav-links a:focus,
+  .nav-links a:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  .menu-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+  }
+  .fixed-position {
+    overflow: hidden;
+    height: 100%;
+}
+  .navbar-main .logo a{
+    font-size: 27px;
+  }
+  .navbar-main .nav-links li{
+    padding: 0 10px;
+    white-space: nowrap;
+  }
+  .navbar-main .nav-links li a{
+    font-size: 15px;
+  }
+}
